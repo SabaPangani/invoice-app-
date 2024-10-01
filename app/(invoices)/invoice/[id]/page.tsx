@@ -21,6 +21,7 @@ export default async function InvoicePage({
   const invoice = await getInvoiceById(params.id);
   const handleStatusChangeToPaid = setInvoiceStatusToPaid.bind(null, params.id);
   const handleDeleteInvoiceWithId = deleteInvoice.bind(null, params.id);
+  
   if (!invoice) {
     notFound();
   }
