@@ -152,7 +152,7 @@ export default async function InvoicePage({
           <ModalFormInvoice invoice={invoice} id={params.id} isEditing={true} />
         </PortalFormWrapper>
 
-        <div className="items-center absolute left-0 bottom-0 gap-x-3 w-full bg-white py-5 px-5 hidden medium:flex">
+        <div className="items-center gap-x-3 w-full bg-white py-5 px-5 hidden medium:flex dark:bg-dark1">
           <ButtonEdit />
           <ButtonDelete />
           <ButtonPaid

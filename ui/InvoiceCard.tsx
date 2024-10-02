@@ -22,7 +22,7 @@ export default function InvoiceCard({ invoice }: { invoice: Invoice }) {
           <p className="medium:hidden font-medium">
             {invoice.client?.clientName}
           </p>
-          <p className="font-bold text-xl text-black hidden medium:block">
+          <p className="font-bold text-xl text-black hidden medium:block dark:text-white">
             {formatPrice(invoice.total)}
           </p>
         </div>
