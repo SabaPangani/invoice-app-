@@ -19,7 +19,7 @@ export default function PortalFormWrapper({
 
   return isFormOpen ? (
     <Portal
-      classes="fixed left-32 top-0 w-full max-w-full h-full flex items-start bg-black bg-opacity-50 z-10 overflow-y-auto large:top-20 large:left-0"
+      classes="fixed left-32 top-0 w-full h-full flex items-start bg-black bg-opacity-50 z-10 overflow-y-auto large:left-0"
       closePortal={() => setFormModal(false)}
     >
       {children}

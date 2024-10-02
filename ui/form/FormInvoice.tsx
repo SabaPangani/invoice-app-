@@ -15,6 +15,7 @@ import ButtonDraft from "../buttons/ButtonDraft";
 import ButtonSend from "../buttons/ButtonSend";
 import { FormWindow } from "@/app/Providers";
 import { useRouter } from "next/navigation";
+import ButtonDiscard from "../buttons/ButtonDiscard";
 
 export default function FormInvoice({
   isEditing,
@@ -210,11 +211,11 @@ export default function FormInvoice({
             <ButtonSend />
           </div>
         ) : (
-          <div className="flex justify-between items-center gap-x-5 w-full mt-9">
-            <ButtonCancel />
-            <div className="flex justify-end gap-x-5 w-full">
+          <div className="flex justify-between items-center gap-x-5 w-full mt-9 medium:gap-x-1">
+            <ButtonDiscard />
+            <div className="flex justify-end gap-x-5 w-full medium:gap-x-1">
               <ButtonDraft handleClick={saveDraft} />
-              <ButtonSave />
+              <ButtonSend />
             </div>
           </div>
         )}

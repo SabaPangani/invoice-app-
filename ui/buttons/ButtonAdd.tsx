@@ -13,7 +13,7 @@ export default function ButtonAdd() {
         setFormModal(true);
       }}
     >
-      <i className="bi bi-plus rounded-full text-white text-xl"></i>
+      <i className="bi bi-plus text-white text-xl"></i>
       New <span className="medium:hidden">Invoice</span>
     </button>
   );
