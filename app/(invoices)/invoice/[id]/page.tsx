@@ -4,7 +4,7 @@ import ButtonDelete from "@/ui/buttons/ButtonDelete";
 import ButtonEdit from "@/ui/buttons/ButtonEdit";
 import ButtonPaid from "@/ui/buttons/ButtonPaid";
 import ModalDeleteInvoice from "@/ui/modal/ModalDeleteInvoice";
-import ModalFormInvoice from "@/ui/modal/ModalFormInvoice";
+import ModalFormInvoice from "@/ui/modal/ModalEditInvoice";
 import PortalFormWrapper from "@/ui/modal/PortalFormWrapper";
 import PortalWrapper from "@/ui/modal/PortalWrapper";
 import { notFound } from "next/navigation";

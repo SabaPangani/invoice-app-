@@ -94,14 +94,14 @@ export async function createNewInvoice(data: FormInput, status: Status) {
       currentDate,
       total,
       status
-    );
-    revalidatePath(`/`);
+      );
+      revalidatePath("/")
     return invoice;
   } catch (error) {
     console.error("Error creating invoice:", error);
     throw error;
   }
-}
+} 
 
 export async function editInvoice(data: FormInput, id: string | undefined) {
   let result;

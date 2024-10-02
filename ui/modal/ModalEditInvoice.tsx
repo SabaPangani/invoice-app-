@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import FormInvoice from "../form/FormInvoice";
-import { Invoice } from "@/lib/types";
 
-export default function ModalFormInvoice({
+export default function ModalEditInvoice({
   isEditing,
   invoice,
   id,

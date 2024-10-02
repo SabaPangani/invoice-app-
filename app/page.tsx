@@ -3,7 +3,7 @@ import Header from "@/components/invoices/Header";
 import { getAllInvoices, getFilteredInvoices } from "@/lib/db";
 import { Invoice } from "@/lib/types";
 import InvoiceCard from "@/ui/InvoiceCard";
-import ModalFormInvoice from "@/ui/modal/ModalFormInvoice";
+import ModalEditInvoice from "@/ui/modal/ModalEditInvoice";
 import PortalFormWrapper from "@/ui/modal/PortalFormWrapper";
 import { Suspense } from "react";
 
@@ -50,7 +50,7 @@ export default async function InvoicePage({
       </>
 
       <PortalFormWrapper>
-        <ModalFormInvoice isEditing={false} />
+        <ModalEditInvoice isEditing={false} />
       </PortalFormWrapper>
     </>
   );
