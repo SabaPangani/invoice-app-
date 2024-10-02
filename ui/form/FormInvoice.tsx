@@ -187,9 +187,9 @@ export default function FormInvoice({
                   className="inputField"
                 />
               </div>
-              <button className="flex justify-center items-center h-full">
+              <button className="flex justify-center items-center h-full relative">
                 <i
-                  className="bi bi-trash3-fill col-span-1 justify-self-end self-center"
+                  className="bi bi-trash3-fill col-span-1 absolute top-1/2 left-[10px]"
                   onClick={() => {
                     remove(index);
                   }}
@@ -198,7 +198,7 @@ export default function FormInvoice({
             </Fragment>
           ))}
           <button
-            className="bg-light-bg dark:bg-dark2 dark:text-light-white w-full max-w-full h-[56px] rounded-[28px] flex items-center justify-center font-bold text-gray gap-x-1 transition-all mt-9 place-self-center col-span-6 md:col-span-10"
+            className="bg-light-bg dark:bg-dark2 dark:text-light-white w-full max-w-full h-[56px] rounded-[28px] flex items-center justify-center font-bold text-gray gap-x-1 transition-all mt-9 place-self-center col-span-7 md:col-span-10"
             type="button"
             onClick={addNewItem}
           >
