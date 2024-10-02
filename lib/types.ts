@@ -33,7 +33,7 @@ export type ItemPrisma = {
 };
 
 export type Item = {
-  key?: string;
+  id?: string;
   name: string;
   quantity: number | string;
   price: number | string;

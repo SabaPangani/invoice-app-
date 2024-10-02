@@ -6,14 +6,7 @@ import FormHeader from "./FormHeader";
 import FormPaymentSection from "./FormPaymentSection";
 import FormSection from "./FormSection";
 import { billFromData, billToData } from "./formData";
-import {
-  FormInput,
-  Invoice,
-  Item,
-  ModalFormType,
-  ModifiedFormInput,
-  Status,
-} from "@/lib/types";
+import { FormInput, Invoice, Item, ModalFormType, Status } from "@/lib/types";
 import { defaultFormValues } from "./formData";
 import { Fragment, useContext, useEffect } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
@@ -46,22 +39,17 @@ export default function FormInvoice({
     mode: "onSubmit",
     reValidateMode: "onSubmit",
     defaultValues: defaultFormValues(invoice),
-    // resolver: zodResolver(invoiceFormSchema),
   });
   const { fields, append, remove } = useFieldArray({
     control,
     name: "items",
   });
 
+  console.log(fields)
+
   const onFormSubmit = async (data: FormInput) => {
     try {
       if (isEditing) {
-        // const modifiedData: ModifiedFormInput = {
-        //   ...data,
-        //   invoiceId: invoice.id.toString(),
-        //   clientId: invoice.clientId,
-        //   addressId: invoice.addressId,
-        // };
         await editInvoice(data, invoice.id);
         if (!isSubmitting) {
           setFormModal(false);
@@ -126,7 +114,7 @@ export default function FormInvoice({
           Item list
         </h3>
         {fields.map((field: Item, index: number) => (
-          <Fragment key={field.key}>
+          <Fragment key={field.id}>
             <div className="col-span-7 md:col-span-3">
               <label className="label">Item Name</label>
               <input
