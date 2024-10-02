@@ -13,6 +13,7 @@ import InvoiceStatus from "@/ui/InvoiceStatus";
 import { formatPrice } from "@/lib/functions";
 import { getInvoiceById } from "@/lib/db";
 
+export const dynamic = "auto";
 export default async function InvoicePage({
   params,
 }: {
@@ -21,7 +22,7 @@ export default async function InvoicePage({
   const invoice = await getInvoiceById(params.id);
   const handleStatusChangeToPaid = setInvoiceStatusToPaid.bind(null, params.id);
   const handleDeleteInvoiceWithId = deleteInvoice.bind(null, params.id);
-  
+
   if (!invoice) {
     notFound();
   }
@@ -34,7 +35,9 @@ export default async function InvoicePage({
         </div>
         <header className="flex justify-between bg-white px-5 py-5 rounded-lg dark:bg-dark1">
           <div className="flex items-center justify-center gap-x-5 medium:justify-between medium:w-full">
-            <p className="text-btn-hover text-lg dark:text-light-white">Status</p>
+            <p className="text-btn-hover text-lg dark:text-light-white">
+              Status
+            </p>
             <InvoiceStatus status={invoice.status} />
           </div>
           <div className="flex items-center justify-end gap-x-5 w-full medium:hidden">
@@ -66,13 +69,17 @@ export default async function InvoicePage({
           <div className="flex justify-between mt-5 pr-16 flex-wrap medium:pr-0">
             <div className="font-medium flex flex-col gap-y-5">
               <p className="flex flex-col">
-                <span className="text-btn-hover dark:text-light-white">Invoice date</span>
+                <span className="text-btn-hover dark:text-light-white">
+                  Invoice date
+                </span>
                 <span className="text-black text-lg font-bold dark:text-white">
                   {invoice?.createdAt.toLocaleDateString()}
                 </span>
               </p>
               <p className="flex flex-col">
-                <span className="text-gray dark:text-light-white">Payment Due</span>
+                <span className="text-gray dark:text-light-white">
+                  Payment Due
+                </span>
                 <span className="text-black text-lg font-bold dark:text-white">
                   {invoice?.paymentDue.toLocaleDateString()}
                 </span>
@@ -80,7 +87,9 @@ export default async function InvoicePage({
             </div>
             <p className="flex flex-col text-btn-hover font-medium dark:text-light-white">
               <span>Bill To</span>
-              <span className="text-black font-bold text-lg dark:text-white">Alex Gray</span>
+              <span className="text-black font-bold text-lg dark:text-white">
+                Alex Gray
+              </span>
               <span className="flex flex-col">
                 {invoice?.client.clientName}{" "}
                 <span>{invoice?.client.clientAddress.city}</span>{" "}
