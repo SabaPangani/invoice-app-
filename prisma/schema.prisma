@@ -95,8 +95,6 @@ model Address {
   country  String
   invoices Invoice[]
   Client   Client[]
-
-  @@unique(name: "address", [street, city, postCode, country])
 }
 
 enum Status {
