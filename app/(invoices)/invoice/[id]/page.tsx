@@ -13,7 +13,6 @@ import InvoiceStatus from "@/ui/InvoiceStatus";
 import { formatPrice } from "@/lib/functions";
 import { getInvoiceById } from "@/lib/db";
 
-export const dynamic = "auto";
 export default async function InvoicePage({
   params,
 }: {

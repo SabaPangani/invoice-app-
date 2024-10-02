@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Invoices",
   description: "App for accounts management",
 };
+export const dynamic = "auto";
 
 export default function RootLayout({
   children,
@@ -24,7 +25,9 @@ export default function RootLayout({
         <Providers>
           <Sidebar />
 
-          <main className="mx-auto w-full max-w-[900px] pt-40 px-2">{children}</main>
+          <main className="mx-auto w-full max-w-[900px] pt-40 px-2">
+            {children}
+          </main>
           <div id="modal-root" />
         </Providers>
       </body>
