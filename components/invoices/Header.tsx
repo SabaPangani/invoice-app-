@@ -16,8 +16,15 @@ export default function Header({
           Invoices
         </h1>
         <p className="text-[14px] text-gray dark:text-light-white font-medium">
-          <span className="medium:hidden">There are total</span> {data?.length}{" "}
-          invoices
+          {data?.length ? (
+            <span className="medium:hidden">
+              There are total {data?.length} invoices
+            </span>
+          ) : (
+            <span className="medium:hidden">
+              There are no invoices
+            </span>
+          )}
         </p>
       </div>
       <div className="flex items-center justify-end gap-x-10 w-full medium:gap-x-5">
