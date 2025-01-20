@@ -37,7 +37,7 @@ export default function Checkbox({
           strokeWidth="2"
         />
       </svg>
-      <label htmlFor={id} className="w-4 h-4 font-bold cursor-pointer">
+      <label htmlFor={id} className="w-4 h-4 font-bold cursor-pointer text-dark1 dark:text-white">
         {name}
       </label>
     </div>

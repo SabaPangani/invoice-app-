@@ -16,7 +16,7 @@ export default function Header({
           Invoices
         </h1>
         <p className="text-[14px] text-gray dark:text-light-white font-medium">
-          <span className="medium:hidden">There are total</span> {data.length}{" "}
+          <span className="medium:hidden">There are total</span> {data?.length}{" "}
           invoices
         </p>
       </div>

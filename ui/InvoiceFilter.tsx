@@ -51,7 +51,7 @@ export default function InvoiceFilter({ statuses }: { statuses: string[] }) {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <p className="font-bold dark:text-white">
+      <p className="font-bold dark:text-white text-dark1">
         Filter <span className="medium:hidden"> by status</span>
       </p>{" "}
       <i
